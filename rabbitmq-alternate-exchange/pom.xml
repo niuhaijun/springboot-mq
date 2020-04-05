@@ -10,18 +10,12 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>kafka</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <artifactId>rabbitmq-alternate-exchange</artifactId>
 
-  <name>kafka</name>
-  <description>springboot集成kafka消息队列</description>
+  <name>rabbitmq-alternate-exchange</name>
+  <description>备份交换器</description>
 
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.kafka</groupId>
-      <artifactId>spring-kafka-test</artifactId>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
   <build>

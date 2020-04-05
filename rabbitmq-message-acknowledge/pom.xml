@@ -10,18 +10,13 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>kafka</artifactId>
+  <artifactId>rabbitmq-message-acknowledge</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>kafka</name>
-  <description>springboot集成kafka消息队列</description>
+  <name>rabbitmq-message-acknowledge</name>
+  <description>消息确认</description>
 
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.kafka</groupId>
-      <artifactId>spring-kafka-test</artifactId>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
   <build>

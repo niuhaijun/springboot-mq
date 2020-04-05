@@ -11,16 +11,21 @@
     <relativePath/>
   </parent>
 
-
   <groupId>com.niu</groupId>
   <artifactId>springboot-mq</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-
   <modules>
     <module>kafka</module>
-    <module>rabbitmq</module>
+
+    <module>rabbitmq-alternate-exchange</module>
+    <module>rabbitmq-consumer-concurrence</module>
+    <module>rabbitmq-consumer-retry</module>
+    <module>rabbitmq-delay-queue</module>
+    <module>rabbitmq-exchange-type</module>
+    <module>rabbitmq-message-acknowledge</module>
+
     <module>rocketmq</module>
   </modules>
 
@@ -34,6 +39,7 @@
   </properties>
 
   <dependencies>
+    <!--web-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
@@ -43,6 +49,7 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+    <!--amqp-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-amqp</artifactId>
@@ -52,19 +59,16 @@
       <artifactId>spring-kafka</artifactId>
     </dependency>
 
+    <!--devTools-->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+    </dependency>
+
+    <!--test-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.amqp</groupId>
-      <artifactId>spring-rabbit-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.kafka</groupId>
-      <artifactId>spring-kafka-test</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>

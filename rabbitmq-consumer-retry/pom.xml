@@ -10,18 +10,14 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>kafka</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
 
-  <name>kafka</name>
-  <description>springboot集成kafka消息队列</description>
+  <artifactId>rabbitmq-consumer-retry</artifactId>
+
+
+  <name>rabbitmq-consumer-retry</name>
+  <description>消费者重试</description>
 
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.kafka</groupId>
-      <artifactId>spring-kafka-test</artifactId>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
   <build>
