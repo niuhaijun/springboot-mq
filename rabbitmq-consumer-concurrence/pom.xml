@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <parent>
-    <groupId>com.niu</groupId>
-    <artifactId>springboot-mq</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-
   <artifactId>rabbitmq-consumer-concurrence</artifactId>
-
-  <name>rabbitmq-consumer-concurrence</name>
-  <description>消费者并发</description>
-
-  <dependencies>
-  </dependencies>
 
   <build>
     <plugins>
       <plugin>
-        <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <groupId>org.springframework.boot</groupId>
       </plugin>
     </plugins>
   </build>
+
+  <dependencies>
+  </dependencies>
+
+  <description>消费者并发</description>
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>rabbitmq-consumer-concurrence</name>
+
+  <parent>
+    <artifactId>springboot-mq</artifactId>
+    <groupId>com.niu</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
 
 </project>
