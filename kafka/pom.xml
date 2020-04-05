@@ -2,28 +2,7 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>kafka</artifactId>
-
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <groupId>org.springframework.boot</groupId>
-      </plugin>
-    </plugins>
-  </build>
-
-  <dependencies>
-    <dependency>
-      <artifactId>spring-kafka-test</artifactId>
-      <groupId>org.springframework.kafka</groupId>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <description>springboot集成kafka消息队列</description>
-
   <modelVersion>4.0.0</modelVersion>
-  <name>kafka</name>
 
   <parent>
     <artifactId>springboot-mq</artifactId>
@@ -31,6 +10,42 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <version>0.0.1-SNAPSHOT</version>
+  <artifactId>kafka</artifactId>
+
+  <name>kafka</name>
+  <description>springboot集成kafka消息队列</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.kafka</groupId>
+      <artifactId>spring-kafka</artifactId>
+    </dependency>
+
+    <dependency>
+      <artifactId>spring-kafka-test</artifactId>
+      <groupId>org.springframework.kafka</groupId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <executable>true</executable>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
 
 </project>

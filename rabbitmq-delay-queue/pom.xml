@@ -2,20 +2,6 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>rabbitmq-delay-queue</artifactId>
-
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <groupId>org.springframework.boot</groupId>
-      </plugin>
-    </plugins>
-  </build>
-
-  <dependencies>
-  </dependencies>
-
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -24,4 +10,30 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
+  <artifactId>rabbitmq-delay-queue</artifactId>
+
+  <name>rabbitmq-delay-queue</name>
+  <description>延迟队列</description>
+
+  <dependencies>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <executable>true</executable>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

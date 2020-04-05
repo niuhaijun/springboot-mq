@@ -2,31 +2,39 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>rabbitmq-consumer-retry</artifactId>
-
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <groupId>org.springframework.boot</groupId>
-      </plugin>
-    </plugins>
-  </build>
-
-
-  <dependencies>
-  </dependencies>
-
-
-  <description>消费者重试</description>
   <modelVersion>4.0.0</modelVersion>
-
-  <name>rabbitmq-consumer-retry</name>
 
   <parent>
     <artifactId>springboot-mq</artifactId>
     <groupId>com.niu</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
+
+  <artifactId>rabbitmq-consumer-retry</artifactId>
+
+  <name>rabbitmq-consumer-retry</name>
+  <description>消费者重试</description>
+
+  <dependencies>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <executable>true</executable>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

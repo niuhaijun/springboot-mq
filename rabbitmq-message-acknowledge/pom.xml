@@ -2,23 +2,7 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>rabbitmq-message-acknowledge</artifactId>
-
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <groupId>org.springframework.boot</groupId>
-      </plugin>
-    </plugins>
-  </build>
-
-  <dependencies>
-  </dependencies>
-  <description>消息确认</description>
-
   <modelVersion>4.0.0</modelVersion>
-  <name>rabbitmq-message-acknowledge</name>
 
   <parent>
     <artifactId>springboot-mq</artifactId>
@@ -26,6 +10,32 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <version>0.0.1-SNAPSHOT</version>
+  <artifactId>rabbitmq-message-acknowledge</artifactId>
+
+  <name>rabbitmq-message-acknowledge</name>
+  <description>消息确认</description>
+
+  <dependencies>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <executable>true</executable>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
 
 </project>
