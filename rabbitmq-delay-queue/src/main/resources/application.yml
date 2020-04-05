@@ -1,0 +1,12 @@
+## \u5F00\u53D1\u8005\u5DE5\u5177
+spring:
+  devtools:
+    restart:
+      enabled: true
+  rabbitmq:
+    ## \u57FA\u672C\u914D\u7F6E
+    virtual-host: /
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
