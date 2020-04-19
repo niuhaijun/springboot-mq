@@ -2,17 +2,7 @@ server:
   port: 8080
 
 spring:
+  profiles:
+    active: local
   application:
     name: rabbitmq-consumer-concurrence
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    username: guest
-    password: guest
-    virtual-host: /
-    listener:
-      simple:
-        concurrency: 5
-        max-concurrency: 5
-        prefetch: 10
-        acknowledge-mode: auto

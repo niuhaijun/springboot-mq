@@ -32,11 +32,11 @@ public class RabbitMQConfig {
 	private String virtualHost;
 
 
-	@Value("${spring.rabbitmq.listener.concurrency}")
+	@Value("${spring.rabbitmq.listener.simple.concurrency}")
 	private Integer concurrency;
-	@Value("${spring.rabbitmq.listener.max-concurrency}")
+	@Value("${spring.rabbitmq.listener.simple.max-concurrency}")
 	private Integer maxConcurrency;
-	@Value("${spring.rabbitmq.listener.prefetch}")
+	@Value("${spring.rabbitmq.listener.simple.prefetch}")
 	private Integer prefetch;
 
 

@@ -1,0 +1,13 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        concurrency: 2
+        max-concurrency: 2
+        prefetch: 1
+        acknowledge-mode: manual
